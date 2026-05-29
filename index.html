@@ -3,38 +3,776 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TuGiro Bolivia</title>
+  <title>TuGiro Bolivia — Pagos internacionales desde Bolivia</title>
+  <meta name="description" content="Enviamos y recibimos pagos internacionales en más de 100 países. Cuentas virtuales en Estados Unidos y Europa para empresas bolivianas." />
+  <link rel="icon" href="assets/images/ICONO.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="grid"></div>
+  <!-- ═══ NAVBAR ═══ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <img src="assets/images/LOGO-1.png" alt="TuGiro Bolivia" />
+      </a>
+      <nav class="navbar__links">
+        <a href="#inicio" class="navbar__link active">Inicio</a>
+        <a href="#servicios" class="navbar__link">Servicios</a>
+        <a href="#nosotros" class="navbar__link">Nosotros</a>
+        <a href="#contacto" class="navbar__link">Contacto</a>
+      </nav>
+      <a href="https://wa.me/59162215104" target="_blank" class="btn btn--primary navbar__cta">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        Hablar con un asesor
+      </a>
+      <button class="navbar__burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-  <main>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="inicio">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <span class="tag">Soluciones Financieras Internacionales</span>
+        <h1>Recibí y enviá dinero internacionalmente <em>desde Bolivia.</em></h1>
+        <p>Enviamos y recibimos pagos internacionales en más de +100 países, aperturamos cuentas virtuales en Estados Unidos y Europa, ayudando a empresas bolivianas a operar globalmente con velocidad, seguridad y respaldo.</p>
+        <div class="hero__ctas">
+          <a href="https://wa.me/59162215104" target="_blank" class="btn btn--primary">Abrir cuenta &nbsp;→</a>
+          <a href="https://wa.me/59162215104" target="_blank" class="btn btn--outline">Hablar con un asesor
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          </a>
+        </div>
+        <div class="hero__feature-list">
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 7h20"/><path d="M7 7v14"/></svg>
+            </div>
+            <span>Operaciones con<br/>contrato y factura</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/><path d="M16 11l2 2 4-4"/></svg>
+            </div>
+            <span>Procesos<br/>KYC / KYB</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span>Atención corporativa<br/>personalizada</span>
+          </div>
+        </div>
+      </div>
 
-    <img src="assets/images/logo.jpg" alt="TuGiro Bolivia" class="logo" />
-
-    <div class="content">
-      <span class="eyebrow">Próximamente</span>
-      <h1>Envía dinero.<br /><em>Sin complicaciones.</em></h1>
-      <p>Bolivia ↔ Exterior en BOB, USD y USDT</p>
+      <!-- Dashboard mockup with map background -->
+      <div class="hero__visual">
+        <img src="assets/images/hero_network_map.png" alt="" class="hero__map-bg" />
+        <div class="dash">
+          <div class="dash__main">
+            <div class="dash__account-label">
+              <div class="dash__account-label-left">
+                <span class="dash__account-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20"/><path d="M2 11h20"/></svg>
+                </span>
+                <div>
+                  <span class="dash__account-type">CUENTA A NOMBRE DE TU EMPRESA</span>
+                  <span class="dash__account-type">USD ACCOUNT</span>
+                </div>
+              </div>
+              <span class="dash__status">● Activa</span>
+            </div>
+            <div class="dash__titular-label">Titular</div>
+            <div class="dash__company">Tu Giro Bolivia LLC</div>
+            <div class="dash__fields">
+              <div class="dash__field">
+                <span class="dash__field-label">ROUTING (ABA)</span>
+                <span class="dash__field-value">026 073 150 <span class="copy-icon">📋</span></span>
+              </div>
+              <div class="dash__field">
+                <span class="dash__field-label">NÚMERO DE CUENTA</span>
+                <span class="dash__field-value">8472 1893 6421 <span class="copy-icon">📋</span></span>
+              </div>
+              <div class="dash__field">
+                <span class="dash__field-label">TIPO DE CUENTA</span>
+                <span class="dash__field-value">CHECKING <span class="copy-icon">📋</span></span>
+              </div>
+            </div>
+            <div class="dash__swift">
+              <span class="dash__field-label">SWIFT / BIC</span>
+              <span class="dash__field-value">TUGIBOBOLXXX <span class="copy-icon">📋</span></span>
+            </div>
+            <div class="dash__tx">
+              <div class="dash__tx-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="12" font-weight="bold">$</text></svg>
+              </div>
+              <div class="dash__tx-info">
+                <span class="dash__tx-label">Transferencia recibida</span>
+                <span class="dash__tx-sub">USD 125,000.00 desde JPMorgan Chase, New York</span>
+              </div>
+            </div>
+          </div>
+          <div class="dash__right">
+            <!-- Card 2: Resumen -->
+            <div class="dash__panel">
+              <div class="dash__panel-header">
+                <span class="dash__panel-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                  Resumen
+                </span>
+                <span class="dash__panel-close">✕</span>
+              </div>
+              <div class="dash__balance-label">Saldo total</div>
+              <div class="dash__balance">USD 120,425.50</div>
+              <div class="dash__balance-sub">↑ 12.5% vs mes anterior</div>
+              <div class="dash__chart">
+                <svg viewBox="0 0 140 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.25"/>
+                      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,40 C10,38 20,32 30,28 C40,24 50,30 60,20 C70,10 80,18 90,12 C100,6 110,10 120,6 C130,2 135,4 140,2" fill="none" stroke="#7C3AED" stroke-width="2"/>
+                  <path d="M0,40 C10,38 20,32 30,28 C40,24 50,30 60,20 C70,10 80,18 90,12 C100,6 110,10 120,6 C130,2 135,4 140,2 L140,48 L0,48 Z" fill="url(#chartGrad)"/>
+                </svg>
+              </div>
+              <div class="dash__section-label">Cuentas</div>
+              <div class="dash__accounts">
+                <div class="dash__account-row">
+                  <span class="dash__flag">🇺🇸</span>
+                  <span class="dash__acc-name">USD Account</span>
+                  <span class="dash__acc-amount">USD 83,200.00</span>
+                </div>
+                <div class="dash__account-row">
+                  <span class="dash__flag">🇪🇺</span>
+                  <span class="dash__acc-name">EUR Account</span>
+                  <span class="dash__acc-amount">EUR 36,980.00</span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Movimientos -->
+            <div class="dash__moves-card">
+              <div class="dash__mov-title">Movimientos recientes</div>
+              <div class="dash__mov-row">
+                <span class="dash__mov-icon">🇺🇸</span>
+                <span class="dash__mov-name">Pago a proveedor - China</span>
+                <div class="dash__mov-right">
+                  <span class="dash__mov-amount neg">- USD 6,230.00</span>
+                  <span class="dash__mov-status">Completado</span>
+                </div>
+              </div>
+              <div class="dash__mov-row">
+                <span class="dash__mov-icon">🇺🇸</span>
+                <span class="dash__mov-name">Cobro internacional - USA</span>
+                <div class="dash__mov-right">
+                  <span class="dash__mov-amount pos">+ USD 12,500.00</span>
+                  <span class="dash__mov-status">Completado</span>
+                </div>
+              </div>
+              <div class="dash__mov-row">
+                <span class="dash__mov-icon">🇪🇺</span>
+                <span class="dash__mov-name">Transferencia a Europa</span>
+                <div class="dash__mov-right">
+                  <span class="dash__mov-amount neg">- EUR 4,850.00</span>
+                  <span class="dash__mov-status">Completado</span>
+                </div>
+              </div>
+              <a href="#" class="dash__view-all">Ver todos los movimientos</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <footer>
-      <a href="https://wa.me/59162215104" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        +591 62215104
-      </a>
-      <span class="sep">·</span>
-      <span>Radial 26, entre 5to y 6to anillo</span>
-    </footer>
+    <!-- Transferencia encriptada floating card -->
+    <div class="container">
+      <div class="hero__encrypted">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="hero__encrypted-info">
+          <span class="hero__encrypted-label">Transferencia encriptada</span>
+          <span class="hero__encrypted-id">ID: 0x0000</span>
+        </div>
+        <a href="#" class="hero__encrypted-link">Ver detalles <span>›</span></a>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- ═══ FEATURES BAR ═══ -->
+  <div class="features-bar">
+    <div class="container features-bar__inner">
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 7h20"/><path d="M7 7v14"/></svg>
+        </div>
+        <span>Operaciones con<br/>contrato y factura</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/><path d="M16 11l2 2 4-4"/></svg>
+        </div>
+        <span>Procesos<br/>KYC / KYB</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span>Atención corporativa<br/>personalizada</span>
+      </div>
+    </div>
+  </div>
 
+  <!-- ═══ STATS ═══ -->
+  <section class="stats" id="nosotros">
+    <div class="container">
+      <div class="stats__card">
+        <div class="stats__intro">
+          <div class="stats__intro-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <p>Empresas bolivianas ya utilizan Tu Giro Bolivia para realizar pagos internacionales y operar globalmente.</p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stat">
+          <span class="stat__number">+70M USD</span>
+          <span class="stat__label">procesados</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stat">
+          <span class="stat__number">+90</span>
+          <span class="stat__label">empresas atendidas</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stat">
+          <span class="stat__number">+160</span>
+          <span class="stat__label">países disponibles</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stat">
+          <span class="stat__number">+20 años</span>
+          <span class="stat__label">de respaldo empresarial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services" id="servicios">
+    <div class="container services__inner">
+      <div class="services__intro">
+        <span class="tag">Soluciones para Empresas</span>
+        <h2>Infraestructura financiera internacional para importadores y exportadores</h2>
+        <p>Diseñamos soluciones modernas para empresas bolivianas que necesitan enviar, recibir y gestionar pagos internacionales.</p>
+      </div>
+      <div class="services__cards">
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <div class="service-card__icon service-card__icon--orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <h3>Importadores</h3>
+              <p class="service-card__sub">Pagos internacionales<br/>para importadores</p>
+            </div>
+          </div>
+          <p class="service-card__desc">Realizamos pagos internacionales a proveedores en China, Estados Unidos, India, Brasil, Chile y más de 160 países.</p>
+          <ul class="service-card__list service-card__list--purple">
+            <li>Pago de facturas y proformas</li>
+            <li>Transferencias SWIFT</li>
+            <li>Pagos rápidos</li>
+            <li>Atención corporativa personalizada</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-card__header">
+            <div class="service-card__icon service-card__icon--orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h3>Exportadores</h3>
+              <p class="service-card__sub">Cobros internacionales<br/>para exportadores</p>
+            </div>
+          </div>
+          <p class="service-card__desc">Ayudamos a empresas bolivianas a recibir pagos desde el exterior mediante cuentas virtuales internacionales en USD y EUR.</p>
+          <ul class="service-card__list service-card__list--orange">
+            <li>Recepción internacional</li>
+            <li>Cuentas virtuales</li>
+            <li>Liquidación local</li>
+            <li>Operación simplificada</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__header">
+            <div class="service-card__icon service-card__icon--purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <h3>Personas naturales</h3>
+              <p class="service-card__sub">Envíos internacionales<br/>personales</p>
+            </div>
+          </div>
+          <p class="service-card__desc">Facilitamos transferencias internacionales rápidas y seguras para personas naturales.</p>
+          <ul class="service-card__list service-card__list--purple">
+            <li>Envíos al exterior</li>
+            <li>Atención personalizada</li>
+            <li>Validación segura</li>
+            <li>Procesos rápidos</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VIRTUAL ACCOUNTS ═══ -->
+  <section class="virtual-accounts">
+    <div class="virtual-accounts__inner">
+      <div class="virtual-accounts__content">
+        <span class="tag">Cuentas Internacionales</span>
+        <h2>Cuentas virtuales internacionales para operar globalmente</h2>
+        <p>Tu Giro Bolivia ayuda a empresas bolivianas a acceder a infraestructura financiera internacional mediante cuentas virtuales en Estados Unidos y Europa.</p>
+        <p>Nuestros clientes pueden recibir pagos internacionales, realizar transferencias globales y operar con proveedores y clientes en el exterior de manera más eficiente.</p>
+      </div>
+      <div class="virtual-accounts__checklist">
+        <ul class="checklist">
+          <li>Cuenta virtual en USD</li>
+          <li>Cuenta virtual en EUR</li>
+          <li>Recepción de pagos internacionales</li>
+          <li>Operación internacional simplificada</li>
+          <li>Soporte corporativo</li>
+        </ul>
+      </div>
+      <div class="virtual-accounts__mockup">
+        <!-- App Dashboard Mockup -->
+        <div class="app-dash">
+          <div class="app-dash__sidebar">
+            <div class="app-dash__logo">
+              <span class="app-dash__logo-text">TUGIRO</span>
+              <span class="app-dash__logo-sub">Bolivia</span>
+            </div>
+            <nav class="app-dash__nav">
+              <a href="#" class="app-dash__nav-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                Resumen
+              </a>
+              <a href="#" class="app-dash__nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                Cuentas
+              </a>
+              <a href="#" class="app-dash__nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                Transferencias
+              </a>
+              <a href="#" class="app-dash__nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Beneficiarios
+              </a>
+              <a href="#" class="app-dash__nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Movimientos
+              </a>
+              <a href="#" class="app-dash__nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                Configuración
+              </a>
+            </nav>
+          </div>
+          <div class="app-dash__main">
+            <div class="app-dash__header">
+              <span class="app-dash__header-title">Resumen de cuentas</span>
+            </div>
+            <div class="app-dash__accounts-grid">
+              <div class="app-dash__account-card">
+                <div class="app-dash__account-top">
+                  <span class="app-dash__account-flag">🇺🇸</span>
+                  <span class="app-dash__account-name">USD Account</span>
+                  <span class="app-dash__account-cur">USD ▾</span>
+                </div>
+                <div class="app-dash__account-balance">83,200.00</div>
+                <div class="app-dash__account-sub">Saldo disponible</div>
+              </div>
+              <div class="app-dash__account-card">
+                <div class="app-dash__account-top">
+                  <span class="app-dash__account-flag">🇪🇺</span>
+                  <span class="app-dash__account-name">EUR Account</span>
+                  <span class="app-dash__account-cur">EUR ▾</span>
+                </div>
+                <div class="app-dash__account-balance">36,980.00</div>
+                <div class="app-dash__account-sub">Saldo disponible</div>
+              </div>
+            </div>
+            <div class="app-dash__movements">
+              <div class="app-dash__movements-header">
+                <span>Movimientos recientes</span>
+                <a href="#">Ver todos</a>
+              </div>
+              <div class="app-dash__mov-row">
+                <span class="app-dash__mov-icon pos">↑</span>
+                <span class="app-dash__mov-name">Payment from USA Company</span>
+                <div class="app-dash__mov-right">
+                  <span class="app-dash__mov-amount pos">+ USD 12,500.00</span>
+                  <span class="app-dash__mov-status">Completado</span>
+                </div>
+              </div>
+              <div class="app-dash__mov-row">
+                <span class="app-dash__mov-icon neg">↓</span>
+                <span class="app-dash__mov-name">Transferencia a proveedor - China</span>
+                <div class="app-dash__mov-right">
+                  <span class="app-dash__mov-amount neg">- USD 6,230.00</span>
+                  <span class="app-dash__mov-status">Completado</span>
+                </div>
+              </div>
+              <div class="app-dash__mov-row">
+                <span class="app-dash__mov-icon pos">↑</span>
+                <span class="app-dash__mov-name">Cobro internacional - Europa</span>
+                <div class="app-dash__mov-right">
+                  <span class="app-dash__mov-amount pos">+ EUR 4,850.00</span>
+                  <span class="app-dash__mov-status">Completado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SPEED / DESTINATIONS ═══ -->
+  <section class="speed">
+    <div class="speed__inner">
+      <div class="speed__content">
+        <span class="tag">Transferencias Internacionales Rápidas</span>
+        <h2>Rapidez en cada<br/>destino</h2>
+        <p>Nuestra infraestructura financiera internacional nos permite procesar pagos globales con rapidez y eficiencia.</p>
+        <a href="https://wa.me/59162215104" target="_blank" class="link-orange">Conoce más sobre nuestros tiempos →</a>
+      </div>
+      <div class="speed__map-area">
+        <div class="speed__grid">
+          <div class="dest-card">
+            <div class="dest-card__flag">
+              <img src="https://flagcdn.com/w80/us.png" alt="Estados Unidos" class="flag-img" />
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__country">Estados Unidos</span>
+              <span class="dest-card__time">Transferencias<br/>en minutos</span>
+            </div>
+            <div class="dest-card__clock">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+          </div>
+          <div class="dest-card">
+            <div class="dest-card__flag">
+              <img src="https://flagcdn.com/w80/br.png" alt="Latinoamérica" class="flag-img" />
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__country">Latinoamérica</span>
+              <span class="dest-card__time">Pagos<br/>en minutos</span>
+            </div>
+            <div class="dest-card__clock">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+          </div>
+          <div class="dest-card">
+            <div class="dest-card__flag">
+              <img src="https://flagcdn.com/w80/cn.png" alt="China" class="flag-img" />
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__country">China y Asia</span>
+              <span class="dest-card__time">Transferencias<br/>en horas</span>
+            </div>
+            <div class="dest-card__clock">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+          </div>
+          <div class="dest-card">
+            <div class="dest-card__flag">
+              <img src="https://flagcdn.com/w80/eu.png" alt="Europa" class="flag-img" />
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__country">Europa</span>
+              <span class="dest-card__time">Mismo día o<br/>siguiente día hábil</span>
+            </div>
+            <div class="dest-card__clock">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COMPLIANCE ═══ -->
+  <section class="compliance">
+    <div class="compliance__inner">
+      <!-- Col 1: escudo grande -->
+      <div class="compliance__col-shield">
+        <div class="shield-wrap">
+          <svg viewBox="0 0 80 90" fill="none" width="140" height="158">
+            <path d="M40 4 L74 18 L74 45 C74 63 58 79 40 86 C22 79 6 63 6 45 L6 18 Z" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.4)" stroke-width="2"/>
+            <path d="M40 10 L68 22 L68 45 C68 61 54 75 40 82 C26 75 12 61 12 45 L12 22 Z" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.3)" stroke-width="1.5"/>
+            <circle cx="40" cy="44" r="16" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+            <polyline points="30,44 37,51 52,36" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <!-- Col 2: título + descripción -->
+      <div class="compliance__col1">
+        <span class="tag tag--light">Compliance y Seguridad</span>
+        <h2>Compliance y seguridad en cada operación</h2>
+        <p>Todas nuestras operaciones siguen procesos de validación y verificación diseñados para brindar mayor seguridad y transparencia.</p>
+      </div>
+      <!-- Col 3: checklist en 2 columnas -->
+      <div class="compliance__col2">
+        <div class="compliance__grid">
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            KYC (Know Your Customer)
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Contratos y facturación
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            KYB (Know Your Business)
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Validación documental
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Procesos AML
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Infraestructura segura
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Monitoreo de operaciones
+          </div>
+          <div class="compliance-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            Partners internacionales
+          </div>
+        </div>
+      </div>
+      <!-- Col 3: card candado -->
+      <div class="compliance__note">
+        <div class="compliance__note-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p>Trabajamos con infraestructura financiera y partners internacionales especializados en soluciones globales de pagos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials">
+    <div class="container testimonials__inner">
+      <div class="testimonials__left">
+        <span class="tag">Empresas que confían en nosotros</span>
+        <h2>Empresas que ya operan con nosotros</h2>
+        <div class="testimonials__arrows">
+          <button class="testimonials__arrow" id="testPrev" aria-label="Anterior">←</button>
+          <button class="testimonials__arrow" id="testNext" aria-label="Siguiente">→</button>
+        </div>
+      </div>
+      <div class="testimonials__cards">
+        <div class="testimonials__track" id="testTrack">
+          <!-- Slide 1 -->
+          <div class="testimonials__slide">
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>Tu Giro Bolivia nos permitió agilizar nuestros pagos internacionales y operar con mucha más tranquilidad.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Empresa importadora</div><div class="testimonial__city">Santa Cruz</div></div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>La rapidez y la atención personalizada marcaron una gran diferencia para nuestra empresa.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Cliente corporativo</div><div class="testimonial__city">Cochabamba</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonials__slide">
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>Por fin encontramos una solución confiable para cobrar desde Estados Unidos. El proceso fue sencillo y el equipo muy profesional.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Empresa exportadora</div><div class="testimonial__city">La Paz</div></div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>Trabajar con Tu Giro Bolivia nos ahorró tiempo y complicaciones. Ahora pagamos a nuestros proveedores en China sin problemas.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Importador de tecnología</div><div class="testimonial__city">Santa Cruz</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonials__slide">
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>La cuenta virtual en USD cambió completamente cómo gestionamos nuestros cobros del exterior. Altamente recomendado.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Agencia de servicios</div><div class="testimonial__city">Sucre</div></div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>Confianza, seguridad y tiempos de respuesta increíbles. Desde que operamos con Tu Giro Bolivia, nuestro flujo internacional es mucho más eficiente.</p>
+              <div class="testimonial__author">
+                <div class="testimonial__author-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+                <div><div class="testimonial__type">Empresa constructora</div><div class="testimonial__city">Oruro</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials__dots">
+      <span class="testimonials__dot active" data-index="0"></span>
+      <span class="testimonials__dot" data-index="1"></span>
+      <span class="testimonials__dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner">
+        <img src="assets/images/cta_world_map.png" alt="" class="cta-banner__bg" />
+        <div class="cta-banner__content">
+          <h2>¿Listo para llevar tu empresa al siguiente nivel global?</h2>
+          <p>Hablemos sobre cómo podemos ayudarte a enviar, recibir y gestionar pagos internacionales de manera más eficiente y segura.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="https://wa.me/59162215104" target="_blank" class="btn btn--white">Abrir cuenta &nbsp;→</a>
+          <a href="https://wa.me/59162215104" target="_blank" class="btn btn--outline-white">Hablar con un asesor
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PARTNERS ═══ -->
+  <section class="partners">
+    <div class="container partners__inner">
+      <div class="partners__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.5" width="40" height="40" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2>Empresas que operan con nosotros</h2>
+      <div class="partners__decoration">
+        <span class="partners__line"></span>
+        <span class="partners__node"></span>
+        <span class="partners__line"></span>
+      </div>
+      <p>Trabajamos junto a empresas líderes en distintos sectores, ofreciendo soluciones confiables y eficientes.</p>
+      <div class="partners__marquee-wrap">
+        <div class="partners__marquee">
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_03_57 a.m.png" alt="Hauscenter" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_06_38 a.m.png" alt="BateJunior" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_52_51 a.m.png" alt="Doubletrack" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_02 a.m.png" alt="SyR Internacional" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_22 a.m.png" alt="Import A+ Cruz" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_35 a.m.png" alt="CHINAparts" /></div>
+          <div class="partner-logo"><img src="assets/images/796fdc62-c498-423e-a703-78e672cea1d2.png" alt="Arbott Ltda" /></div>
+          <!-- duplicados para loop sin corte -->
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_03_57 a.m.png" alt="Hauscenter" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_06_38 a.m.png" alt="BateJunior" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_52_51 a.m.png" alt="Doubletrack" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_02 a.m.png" alt="SyR Internacional" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_22 a.m.png" alt="Import A+ Cruz" /></div>
+          <div class="partner-logo"><img src="assets/images/ChatGPT Image 28 may 2026, 10_53_35 a.m.png" alt="CHINAparts" /></div>
+          <div class="partner-logo"><img src="assets/images/796fdc62-c498-423e-a703-78e672cea1d2.png" alt="Arbott Ltda" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="contacto">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo-wrap">
+          <img src="assets/images/LOGO-1.png" alt="TuGiro Bolivia" class="footer__logo-img" />
+        </div>
+        <p>Infraestructura financiera global para empresas bolivianas.</p>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/share/1bdrXeG3zy/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" class="footer__social">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/tugirobolivia?igsh=MWdwczA3bmNoaXNidg==" target="_blank" aria-label="Instagram" class="footer__social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/59176601749" target="_blank" aria-label="WhatsApp" class="footer__social">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Empresa</h4>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer__col">
+        <h4>Servicios</h4>
+        <a href="#servicios">Importadores</a>
+        <a href="#servicios">Exportadores</a>
+        <a href="#servicios">Cuentas internacionales</a>
+        <a href="#servicios">Envíos personales</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política AML/KYC</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <a href="tel:+59176601749" class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +591 76601749
+        </a>
+        <a href="mailto:info@tugirobolivia.com" class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@tugirobolivia.com
+        </a>
+        <span class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Radial 26, entre 5to y 6to anillo, Santa Cruz de la Sierra
+        </span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2024 Tu Giro Bolivia. Todos los derechos reservados.</span>
+        <span>Diseñado para empresas que no tienen límites.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
