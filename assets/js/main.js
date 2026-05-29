@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     burger.addEventListener('click', function () {
       open = !open;
       if (open) {
-        mobileNavLinks.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:white;padding:20px 24px;border-bottom:1px solid #E5E7EB;z-index:99;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:none;';
+        var navH = document.querySelector('.navbar__inner').offsetHeight;
+        mobileNavLinks.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:' + navH + 'px;left:0;right:0;background:white;padding:20px 24px;border-bottom:1px solid #E5E7EB;z-index:99;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:none;';
       } else {
         mobileNavLinks.removeAttribute('style');
       }
