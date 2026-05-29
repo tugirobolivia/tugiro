@@ -740,6 +740,9 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 48px;
   padding: 0 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 .virtual-accounts__checklist {
   display: flex;
@@ -919,7 +922,10 @@ a { text-decoration: none; color: inherit; }
   grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
   gap: 48px;
-  padding: 0 48px 0 24px;
+  padding: 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 .speed__content h2 {
   font-size: clamp(28px, 3.5vw, 42px);
