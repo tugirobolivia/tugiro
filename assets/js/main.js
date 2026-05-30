@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── Navbar & scroll spy ───────────────────
   var NAVBAR_H = 88;
   var navItems = document.querySelectorAll('.navbar__link');
+  // Orden igual al DOM: inicio → nosotros (stats) → servicios
   var spySections = [
     { id: 'inicio',    link: document.querySelector('.navbar__link[href="#inicio"]') },
+    { id: 'nosotros',  link: null }, // stats section, no tiene link en navbar
     { id: 'servicios', link: document.querySelector('.navbar__link[href="#servicios"]') },
-    { id: 'nosotros',  link: document.querySelector('.navbar__link[href="#nosotros"]') },
-    { id: 'contacto',  link: document.querySelector('.navbar__link[href="#contacto"]') },
   ];
 
   function setActiveLink(link) {
@@ -103,25 +103,69 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ── Scroll animations ────────────────────
-  var animateElements = document.querySelectorAll('.stat, .service-card, .dest-card, .testimonial, .compliance-item, .partner-logo');
+  // ── Count-up animation for stats ─────────
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-count'));
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1800;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(ease * target);
+      el.textContent = prefix + current + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = prefix + target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
 
   if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+    var countObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat__number[data-count]').forEach(function(el) {
+      countObserver.observe(el);
+    });
+
+    // ── Fade-in animations ──────────────────
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.anim-fade-up, .anim-fade-left, .anim-fade-right').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+
+    // ── Legacy scroll animations ────────────
+    var legacyObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
+          legacyObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    animateElements.forEach(function (el) {
+    document.querySelectorAll('.service-card, .dest-card, .compliance-item, .partner-logo').forEach(function(el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
+      legacyObserver.observe(el);
     });
   }
 
@@ -146,6 +190,22 @@ document.addEventListener('DOMContentLoaded', function () {
     testNext.addEventListener('click', function() { goToTestSlide(testCurrent + 1); });
     testDots.forEach(function(dot, i) {
       dot.addEventListener('click', function() { goToTestSlide(i); });
+    });
+  }
+
+  // ── Hero mouse parallax ──────────────────
+  var heroEl = document.querySelector('.hero');
+  var heroVisual = document.querySelector('.hero__visual');
+  if (heroEl && heroVisual) {
+    document.addEventListener('mousemove', function(e) {
+      var rect = heroEl.getBoundingClientRect();
+      if (e.clientY < rect.top || e.clientY > rect.bottom) return;
+      var dx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+      var dy = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+      heroVisual.style.transform = 'translate(' + (dx * -10) + 'px, ' + (dy * -7) + 'px)';
+    });
+    heroEl.addEventListener('mouseleave', function() {
+      heroVisual.style.transform = '';
     });
   }
 

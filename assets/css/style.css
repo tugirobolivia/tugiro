@@ -6,6 +6,111 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { overflow-x: hidden; max-width: 100%; }
 
+/* ─── ANIMACIONES ─────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes clockPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+.dest-card__clock svg {
+  animation: clockPulse 2s ease-in-out infinite;
+}
+.anim-fade-up   { opacity: 0; }
+.anim-fade-up.visible   { animation: fadeInUp   0.55s ease forwards; }
+.anim-fade-left { opacity: 0; }
+.anim-fade-left.visible { animation: fadeInLeft 0.55s ease forwards; }
+.anim-fade-right { opacity: 0; }
+.anim-fade-right.visible { animation: fadeInRight 0.55s ease forwards; }
+
+/* ─── HERO ANIMATIONS ────────────────────── */
+
+/* Entrada escalonada del hero */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero__content .tag {
+  animation: heroSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+}
+.hero__content h1 {
+  animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.25s both;
+}
+.hero__content p {
+  animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+}
+.hero__ctas {
+  animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.55s both;
+}
+.hero__feature-list {
+  animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.7s both;
+}
+
+/* Entrada de los cards desde la derecha */
+@keyframes heroCardsIn {
+  from { opacity: 0; transform: translateX(48px) scale(0.97); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+.hero__visual {
+  animation: heroCardsIn 0.85s cubic-bezier(0.16,1,0.3,1) 0.35s both;
+}
+
+/* Float suave en los cards */
+@keyframes floatCards {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.dash__main {
+  animation: floatCards 6s ease-in-out infinite;
+}
+.dash__right {
+  animation: floatCards 6s ease-in-out 1.5s infinite;
+}
+
+/* Gradiente animado en "desde Bolivia." */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero__content h1 em {
+  background: linear-gradient(90deg, rgb(69,1,115), #9b2dca, #450173, #7c3aed, rgb(69,1,115));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Shimmer en botón primario */
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+.btn--primary:hover::after {
+  left: 140%;
+  transition: left 0.55s ease;
+}
+
 :root {
   --purple:        #3D0FA3;
   --purple-mid:    #5B21B6;
@@ -204,7 +309,7 @@ a { text-decoration: none; color: inherit; }
 /* ═══ HERO ════════════════════════════════════ */
 .hero {
   padding-top: 110px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   background-color: var(--purple-light);
   background-image: url("../images/fondo 1.png");
   background-size: cover;
@@ -1182,7 +1287,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ═══ CTA BANNER ══════════════════════════════ */
 .cta-banner-section {
-  padding: 40px 0 60px;
+  padding: 24px 0 32px;
   background: var(--white);
 }
 .cta-banner {
@@ -1235,7 +1340,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ═══ PARTNERS ════════════════════════════════ */
 .partners {
-  padding: 72px 0;
+  padding: 40px 0 60px;
   background: var(--white);
 }
 .partners__inner { text-align: center; }
