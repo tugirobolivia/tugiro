@@ -70,6 +70,9 @@
         </div>
       </div>
 
+      <!-- Partículas flotantes -->
+      <div class="hero__particles" id="heroParticles"></div>
+
       <!-- Dashboard mockup with map background -->
       <div class="hero__visual">
         <img src="assets/images/hero_network_map.png" alt="" class="hero__map-bg" />
@@ -92,20 +95,20 @@
             <div class="dash__fields">
               <div class="dash__field">
                 <span class="dash__field-label">ROUTING (ABA)</span>
-                <span class="dash__field-value">026 073 150 <span class="copy-icon">📋</span></span>
+                <span class="dash__field-value">026 073 150 <button class="copy-btn" data-copy="026073150" title="Copiar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span>
               </div>
               <div class="dash__field">
                 <span class="dash__field-label">NÚMERO DE CUENTA</span>
-                <span class="dash__field-value">8472 1893 6421 <span class="copy-icon">📋</span></span>
+                <span class="dash__field-value">8472 1893 6421 <button class="copy-btn" data-copy="8472189364211" title="Copiar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span>
               </div>
               <div class="dash__field">
                 <span class="dash__field-label">TIPO DE CUENTA</span>
-                <span class="dash__field-value">CHECKING <span class="copy-icon">📋</span></span>
+                <span class="dash__field-value">CHECKING <button class="copy-btn" data-copy="CHECKING" title="Copiar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span>
               </div>
             </div>
             <div class="dash__swift">
               <span class="dash__field-label">SWIFT / BIC</span>
-              <span class="dash__field-value">TUGIBOBOLXXX <span class="copy-icon">📋</span></span>
+              <span class="dash__field-value">TUGIBOBOLXXX <button class="copy-btn" data-copy="TUGIBOBOLXXX" title="Copiar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></span>
             </div>
             <div class="dash__tx">
               <div class="dash__tx-icon">
@@ -219,7 +222,7 @@
   <!-- ═══ STATS ═══ -->
   <section class="stats" id="nosotros">
     <div class="container">
-      <div class="stats__card">
+      <div class="stats__card reveal">
         <div class="stats__intro">
           <div class="stats__intro-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
@@ -253,7 +256,7 @@
   <!-- ═══ SERVICES ═══ -->
   <section class="services" id="servicios">
     <div class="container services__inner">
-      <div class="services__intro">
+      <div class="services__intro reveal-left">
         <span class="tag">Soluciones para Empresas</span>
         <h2>Infraestructura financiera internacional para importadores y exportadores</h2>
         <p>Diseñamos soluciones modernas para empresas bolivianas que necesitan enviar, recibir y gestionar pagos internacionales.</p>
@@ -437,7 +440,7 @@
   <!-- ═══ SPEED / DESTINATIONS ═══ -->
   <section class="speed">
     <div class="speed__inner">
-      <div class="speed__content">
+      <div class="speed__content reveal-left">
         <span class="tag">Transferencias Internacionales Rápidas</span>
         <h2>Rapidez en cada<br/>destino</h2>
         <p>Nuestra infraestructura financiera internacional nos permite procesar pagos globales con rapidez y eficiencia.</p>
@@ -513,7 +516,7 @@
         </div>
       </div>
       <!-- Col 2: título + descripción -->
-      <div class="compliance__col1">
+      <div class="compliance__col1 reveal">
         <span class="tag tag--light">Compliance y Seguridad</span>
         <h2>Compliance y seguridad en cada operación</h2>
         <p>Todas nuestras operaciones siguen procesos de validación y verificación diseñados para brindar mayor seguridad y transparencia.</p>

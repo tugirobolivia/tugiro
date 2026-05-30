@@ -193,6 +193,69 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ── Scroll progress bar ──────────────────
+  var progressBar = document.getElementById('scrollProgress');
+  if (progressBar) {
+    window.addEventListener('scroll', function() {
+      var scrolled = window.scrollY;
+      var total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+  }
+
+  // ── Hero floating particles ───────────────
+  var particlesContainer = document.getElementById('heroParticles');
+  if (particlesContainer) {
+    var particleCount = 18;
+    for (var i = 0; i < particleCount; i++) {
+      var p = document.createElement('span');
+      var size = Math.random() * 4 + 2;
+      p.style.cssText = [
+        'width:' + size + 'px',
+        'height:' + size + 'px',
+        'left:' + (Math.random() * 100) + '%',
+        'bottom:' + (Math.random() * 60) + '%',
+        'animation-duration:' + (Math.random() * 8 + 6) + 's',
+        'animation-delay:' + (Math.random() * 6) + 's',
+        'opacity:0.3'
+      ].join(';');
+      particlesContainer.appendChild(p);
+    }
+  }
+
+  // ── Section reveal on scroll ──────────────
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          var delay = e.target.getAttribute('data-delay') || 0;
+          setTimeout(function() { e.target.classList.add('visible'); }, delay * 1000);
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) {
+      revealObs.observe(el);
+    });
+  }
+
+  // ── Copy buttons ─────────────────────────
+  document.querySelectorAll('.copy-btn').forEach(function(btn) {
+    var tooltip = document.createElement('span');
+    tooltip.className = 'copy-tooltip';
+    tooltip.textContent = '¡Copiado!';
+    btn.appendChild(tooltip);
+
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(function() {
+        btn.classList.add('copied');
+        setTimeout(function() { btn.classList.remove('copied'); }, 1800);
+      });
+    });
+  });
+
   // ── Hero mouse parallax ──────────────────
   var heroEl = document.querySelector('.hero');
   var heroVisual = document.querySelector('.hero__visual');

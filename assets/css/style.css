@@ -33,6 +33,95 @@ html, body { overflow-x: hidden; max-width: 100%; }
 .anim-fade-right { opacity: 0; }
 .anim-fade-right.visible { animation: fadeInRight 0.55s ease forwards; }
 
+/* ─── SCROLL PROGRESS BAR ───────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, rgb(69,1,115), #9b2dca, var(--orange));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ─── HERO PARTICLES ─────────────────────── */
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero__particles span {
+  position: absolute;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgb(69,1,115);
+  opacity: 0;
+  animation: particleFloat linear infinite;
+}
+@keyframes particleFloat {
+  0%   { opacity: 0; transform: translateY(100%) scale(0.5); }
+  10%  { opacity: 0.4; }
+  90%  { opacity: 0.15; }
+  100% { opacity: 0; transform: translateY(-120px) scale(1.2); }
+}
+
+/* ─── SECTION REVEAL ─────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* ─── ANIMATED GRADIENT BORDER (featured card) */
+@keyframes borderRotate {
+  from { --border-angle: 0deg; }
+  to   { --border-angle: 360deg; }
+}
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.service-card--featured {
+  border: none;
+  background:
+    linear-gradient(white, white) padding-box,
+    conic-gradient(from var(--border-angle), var(--orange), #ff8c00, #ffb347, var(--orange)) border-box;
+  border: 2px solid transparent;
+  animation: borderRotate 3s linear infinite;
+}
+
+/* ─── CTA BANNER animated gradient ──────── */
+@keyframes ctaGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.cta-banner {
+  background: linear-gradient(135deg, #1a0455, #2D0A6E, #450173, #3D0FA3, #1a0455) !important;
+  background-size: 300% 300% !important;
+  animation: ctaGradient 8s ease infinite !important;
+}
+
 /* ─── HERO ANIMATIONS ────────────────────── */
 
 /* Entrada escalonada del hero */
@@ -486,7 +575,37 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   color: var(--text);
 }
-.copy-icon { color: var(--text-muted); font-size: 10px; cursor: pointer; margin-left: 4px; }
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 3px 4px;
+  margin-left: 3px;
+  border-radius: 5px;
+  color: var(--text-muted);
+  vertical-align: middle;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+.copy-btn:hover { color: var(--purple); background: var(--purple-light); }
+.copy-btn.copied { color: #10B981; }
+.copy-btn .copy-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1A0533;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.copy-btn.copied .copy-tooltip { opacity: 1; }
 .dash__swift {
   display: flex;
   flex-direction: column;
