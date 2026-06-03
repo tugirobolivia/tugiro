@@ -227,12 +227,24 @@
   border-color: var(--purple-tint);
 }
 .nos-team-card__avatar {
-  width: 80px; height: 80px;
+  width: 112px; height: 112px;
   background: var(--purple-light);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: rgb(69,1,115);
   margin: 0 auto 20px;
+  overflow: hidden;
+  border: 4px solid var(--purple-light);
+  box-shadow: 0 10px 26px rgba(61,15,163,0.12);
+}
+.nos-team-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+}
+.nos-team-card:nth-child(3) .nos-team-card__avatar img {
+  object-position: 36% 18%;
 }
 .nos-team-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
 .nos-team-card__role {

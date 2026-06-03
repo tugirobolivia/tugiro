@@ -57,3 +57,15 @@ No usar espacios aleatorios.
 
 ## Regla de consistencia
 Si una pantalla ya definió un patrón visual, las nuevas pantallas deben reutilizarlo.
+
+## Actualización 2026-06-03
+- El mockup financiero del hero debe conservarse en móvil, apilado debajo del contenido y sin overflow horizontal.
+- Las referencias de alcance global deben usar `+100` / `más de 100 países`.
+- El footer debe comunicar copyright desde 2026.
+- La sección "El equipo" en Nosotros debe usar fotografías reales dentro de las tarjetas existentes, manteniendo cards blancas, borde sutil, radio amplio y jerarquía actual.
+- Todo CTA textual "Abrir cuenta" debe dirigir al formulario de apertura: `https://forms.gle/eRLY9yRAp9YX1Z5z8`.
+
+## Actualización legal 2026-06-03
+- Los enlaces "Términos y condiciones" y "Política de privacidad" deben abrir una ventana emergente simple con texto legal plano.
+- No se agrega diseño visual elaborado a estos modales; solo estructura mínima de lectura y cierre.
+- Los modales legales deben verse profesionales y ser legibles en móvil: ancho máximo desktop, altura con scroll interno, backdrop discreto, botón de cierre claro y padding reducido en pantallas pequeñas.

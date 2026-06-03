@@ -168,7 +168,7 @@ Footer (5 cols en dark bg)
 | Elemento | Desktop | Mobile (<768px) |
 |---|---|---|
 | Navbar | Logo + links + CTA | Solo logo + hamburger |
-| Hero | 2 columnas | 1 columna, visual oculto |
+| Hero | 2 columnas | 1 columna; contenido arriba y mockup financiero apilado debajo |
 | Services | intro + 3 cards | 1 columna |
 | Stats | fila horizontal | 2x2 grid |
 | Virtual accounts | 2 cols | 1 col |
@@ -189,3 +189,19 @@ Footer (5 cols en dark bg)
 ### MENORES
 3. El ícono de "Operaciones con contrato y factura" en el features bar debería ser un documento/contrato (ya está correcto en el código)
 4. El ícono de "Procesos KYC/KYB" debería ser persona con checkmark (ya correcto)
+
+---
+
+## Actualización solicitada 2026-06-03
+
+- En mobile (`<=768px`) el hero no oculta el mockup: las tarjetas del dashboard se reacomodan en una columna, debajo del copy y CTAs.
+- La métrica de países disponibles queda en `+100`; todo texto comercial debe decir `más de 100 países`.
+- Footer bottom: `© 2026 Tu Giro Bolivia. Todos los derechos reservados.`
+- Sección Nosotros / Equipo: sustituir avatares SVG por las tres JPG recientes en `assets/images`, recortadas con `object-fit: cover` dentro de un contenedor circular para mantener el lenguaje de tarjeta actual.
+- Los botones "Abrir cuenta" abren `https://forms.gle/eRLY9yRAp9YX1Z5z8` en pestaña nueva.
+
+## Actualización legal 2026-06-03
+
+- Footer legal: "Términos y condiciones" y "Política de privacidad" abren un modal nativo/simple con texto plano.
+- El contenido legal se mantiene centralizado en JS compartido para `index.html` y `nosotros.html`.
+- El modal usa una superficie blanca centrada, radio moderado, borde sutil, sombra suave, scroll interno y layout responsive para `<=480px`.
