@@ -205,3 +205,12 @@ Footer (5 cols en dark bg)
 - Footer legal: "Términos y condiciones" y "Política de privacidad" abren un modal nativo/simple con texto plano.
 - El contenido legal se mantiene centralizado en JS compartido para `index.html` y `nosotros.html`.
 - El modal usa una superficie blanca centrada, radio moderado, borde sutil, sombra suave, scroll interno y layout responsive para `<=480px`.
+
+## Cotizador público — especificación 2026-09-20
+- Nueva entrada «Cotizar envío» en el menú, ancla #cotizador.
+- Ubicación: inmediatamente después del hero y antes de las secciones comerciales existentes.
+- Marco: máximo 1200px como el sitio, fondo blanco, radio 24px, borde suave; 64px de margen vertical.
+- Escritorio: formulario a la izquierda y resultado morado a la derecha; monto de 30px, total de 48px, etiquetas de 14px, botones redondeados naranja/morado. Debajo, cuatro condiciones (TC BOB y comisiones de las tres ciudades).
+- Móvil: formulario, resultado y tarifas apiladas, sin desplazamiento horizontal; altura del marco adaptable al contenido comunicado por el cotizador con origen y ventana verificados.
+- Estados: monto vacío, cálculo en curso, resultado vigente, vencido y referencia no disponible; nunca mostrar precio vencido como vigente.
+- Link alternativo abre el cotizador directamente si el navegador no permite cargar el marco.

@@ -69,3 +69,7 @@ Si una pantalla ya definió un patrón visual, las nuevas pantallas deben reutil
 - Los enlaces "Términos y condiciones" y "Política de privacidad" deben abrir una ventana emergente simple con texto legal plano.
 - No se agrega diseño visual elaborado a estos modales; solo estructura mínima de lectura y cierre.
 - Los modales legales deben verse profesionales y ser legibles en móvil: ancho máximo desktop, altura con scroll interno, backdrop discreto, botón de cierre claro y padding reducido en pantallas pequeñas.
+
+## Cotizador público — 2026-09-20
+Referencia: Portal del Cliente TuGiro aprobado por el propietario (captura del formulario y tarjetas moradas/naranjas). Se agrega una sección funcional después del hero, con acceso desde el menú; se conserva el resto de la landing. Contenedor existente `.container`, separación vertical de 64 px, borde y radios de 24 px. El cotizador reutiliza el servicio del portal mediante una ventana integrada de origen `clientes.tugirobolivia.com`; no duplica las fórmulas ni las tarifas en la landing.
+Colores del portal: morado profundo #2b074a, naranja #ff7b24, superficies #faf8fc/blanco, borde #e8dff0. Tipografía de la sección externa: Outfit heredada. Controles grandes, etiquetas explícitas y comisión visible, sin pedir beneficiario ni iniciar sesión.

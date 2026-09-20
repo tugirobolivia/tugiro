@@ -22,6 +22,7 @@
       </a>
       <nav class="navbar__links">
         <a href="#inicio" class="navbar__link active">Inicio</a>
+        <a href="#cotizador" class="navbar__link">Cotizar envío</a>
         <a href="#servicios" class="navbar__link">Servicios</a>
         <a href="nosotros.html" class="navbar__link">Nosotros</a>
       </nav>
@@ -194,6 +195,23 @@
     </div>
 
   </section>
+
+  <!-- Cotizador conectado a las condiciones comerciales de TuGiro OS -->
+  <section id="cotizador" aria-label="Cotiza tu envío" style="padding:64px 0;scroll-margin-top:100px;background:#faf8fc">
+    <div class="container">
+      <iframe id="tugiro-cotizador" src="https://clientes.tugirobolivia.com/cotizador" title="Cotizador de envíos TuGiro Bolivia" loading="lazy" style="display:block;width:100%;height:1100px;border:1px solid #e8dff0;border-radius:24px;background:#faf8fc"></iframe>
+      <p style="margin-top:16px;text-align:center;font-size:14px"><a href="https://clientes.tugirobolivia.com/cotizador" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">Abrir cotizador en una nueva ventana ↗</a></p>
+    </div>
+  </section>
+  <script>
+    window.addEventListener('message', function (event) {
+      var frame = document.getElementById('tugiro-cotizador');
+      if (!frame || event.origin !== 'https://clientes.tugirobolivia.com' || event.source !== frame.contentWindow) return;
+      if (event.data && event.data.type === 'tugiro-quote-height' && Number.isFinite(event.data.height)) {
+        frame.style.height = Math.min(2200, Math.max(600, event.data.height + 8)) + 'px';
+      }
+    });
+  </script>
 
   <!-- ═══ FEATURES BAR ═══ -->
   <div class="features-bar">
