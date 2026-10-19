@@ -218,3 +218,7 @@ Footer (5 cols en dark bg)
 - Eliminar #cotizador, iframe, enlace alternativo, listener de altura y enlace del menú. Sin hueco entre Hero y Features Bar.
 - Métricas: +200M USD / procesados y +300 / clientes; actualizar también data-count a 200 y 300.
 - Conservar +100 países y +20 años, Outfit, naranja #FF5500, tarjeta blanca con borde, divisores y responsive existente.
+## Nosotros — actualización 2026-10-19
+- Hero oscuro: +200M USD / procesados y +300 / clientes, con data-count 200 y 300; +20 años se conserva.
+- Tarjetas de equipo: Julio César Zeballos / Presidente; Nicolás Zeballos / Director Ejecutivo; María Marleni Becerra / Gerente Comercial.
+- Mantener tamaño, Outfit, colores naranja/morado, retratos circulares, badges, espaciado y responsive existentes.
