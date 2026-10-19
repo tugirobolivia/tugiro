@@ -73,3 +73,7 @@ Si una pantalla ya definió un patrón visual, las nuevas pantallas deben reutil
 ## Cotizador público — 2026-09-20
 Referencia: Portal del Cliente TuGiro aprobado por el propietario (captura del formulario y tarjetas moradas/naranjas). Se agrega una sección funcional después del hero, con acceso desde el menú; se conserva el resto de la landing. Contenedor existente `.container`, separación vertical de 64 px, borde y radios de 24 px. El cotizador reutiliza el servicio del portal mediante una ventana integrada de origen `clientes.tugirobolivia.com`; no duplica las fórmulas ni las tarifas en la landing.
 Colores del portal: morado profundo #2b074a, naranja #ff7b24, superficies #faf8fc/blanco, borde #e8dff0. Tipografía de la sección externa: Outfit heredada. Controles grandes, etiquetas explícitas y comisión visible, sin pedir beneficiario ni iniciar sesión.
+## Actualización 2026-10-19 (sustituye la sección Cotizador público)
+- Retirar el cotizador integrado, enlace alternativo, listener de altura y entrada del menú.
+- Hero seguido por Features Bar y Stats sin espacio reservado al cotizador.
+- Métricas: +200M USD procesados y +300 clientes; conservar Outfit, naranja, tamaños, bordes, divisores y responsive existentes.
