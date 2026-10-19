@@ -77,3 +77,7 @@ Colores del portal: morado profundo #2b074a, naranja #ff7b24, superficies #faf8f
 - Retirar el cotizador integrado, enlace alternativo, listener de altura y entrada del menú.
 - Hero seguido por Features Bar y Stats sin espacio reservado al cotizador.
 - Métricas: +200M USD procesados y +300 clientes; conservar Outfit, naranja, tamaños, bordes, divisores y responsive existentes.
+## Nosotros — actualización 2026-10-19
+- Mantener diseño, retratos, descripciones y estilo responsive existentes.
+- Métricas del hero: +200M USD procesados y +300 clientes, incluidos contadores animados.
+- Julio César Zeballos: Presidente. Nicolás Zeballos: Director Ejecutivo. María Marleni Becerra conserva Gerente Comercial.
